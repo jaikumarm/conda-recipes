@@ -6,16 +6,20 @@ Example recipes for the conda build system.  Use
 
 Build the local custom package:
 
-    conda build <recipe directory>
+    conda build theano
 
 Install and use the local package
 
-    conda install --use-local package_name
+    conda install --use-local theano
 
 Upload package to anaconda cloud
 
     anaconda login
-    anaconda upload ~/miniconda/conda-bld/linux-64/pyinstrument-0.12-py27_0.tar.bz
+    anaconda upload linux-64/theano-0.9.0.dev0-py35_0.tar.bz2
+
+Install package from anaconda.org
+
+    conda install -c jaikumarm theano=0.9.0.dev0
 
 
 This is a personal repository.  For much more comprehensive list of recipes from the community look at  [conda/conda-recipes](https://github.com/conda/conda-recipes).

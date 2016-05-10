@@ -4,7 +4,19 @@ build and test recipes for conda
 # usage
 Example recipes for the conda build system.  Use
 
+Build the local custom package:
+
     conda build <recipe directory>
+
+Install and use the local package
+
+    conda install --use-local package_name
+
+Upload package to anaconda cloud
+
+    anaconda login
+    anaconda upload ~/miniconda/conda-bld/linux-64/pyinstrument-0.12-py27_0.tar.bz
+
 
 This is a personal repository.  For much more comprehensive list of recipes from the community look at  [conda/conda-recipes](https://github.com/conda/conda-recipes).
 

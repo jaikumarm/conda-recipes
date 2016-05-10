@@ -21,6 +21,13 @@ Install package from anaconda.org
 
     conda install -c jaikumarm theano=0.9.0.dev0
 
+Build package for different python versions
+
+    conda build --py 3.5 theano
+    
+Build package for different operating systems
+
+    conda convert nose-parameterized-0.5.0-py27_0.tar.bz2  --platform all
 
 This is a personal repository.  For much more comprehensive list of recipes from the community look at  [conda/conda-recipes](https://github.com/conda/conda-recipes).
 

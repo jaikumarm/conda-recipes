@@ -1,0 +1,61 @@
+package:
+  name: nose-parameterized
+  version: "0.5.0"
+
+source:
+  fn: nose-parameterized-0.5.0.tar.gz
+  url: https://pypi.python.org/packages/0d/22/44ff04785ff8a1e4f618a39b20e6d96e1dbb33088fc13d690a035b12b3f6/nose-parameterized-0.5.0.tar.gz
+  md5: 96d66e6af400cdfbf5119b519138b79d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - nose-parameterized = nose-parameterized:main
+    #
+    # Would create an entry point called nose-parameterized that calls nose-parameterized.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - nose_parameterized
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/wolever/nose-parameterized
+  license: BSD License
+  summary: 'Parameterized testing with any Python test framework'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

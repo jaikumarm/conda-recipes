@@ -1,0 +1,64 @@
+package:
+  name: pandoc
+  version: "1.0.0b2"
+
+source:
+  fn: pandoc-1.0.0b2.tar.gz
+  url: https://files.pythonhosted.org/packages/51/57/94440dbaed76f6fb73f40756e484b8de645ad36f56d4d7100e03e443591a/pandoc-1.0.0b2.tar.gz
+  md5: 434a353d5a0a5f4df4a3cd142e921430
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pandoc = pandoc:main
+    #
+    # Would create an entry point called pandoc that calls pandoc.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - ply
+
+  run:
+    - python
+    - ply
+
+test:
+  # Python imports
+  imports:
+    - pandoc
+#    - pandoc.doctest
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/boisgera/pandoc
+  license: MIT License
+  summary: 'Pandoc Documents for Python'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

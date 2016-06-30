@@ -1,0 +1,73 @@
+package:
+  name: tpot
+  version: "0.4"
+
+source:
+  fn: TPOT-0.4.tar.gz
+  url: https://pypi.python.org/packages/5f/e4/d59729f549bae3249f8b134971610e0030b24099ea03ff7ac18a8c6a929a/TPOT-0.4.tar.gz
+  md5: 64d0a678516a70e811c3ae5f5e0f4d09
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - tpot = tpot:main
+    #
+    # Would create an entry point called tpot that calls tpot.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy >=1.9.3
+    - pandas >=0.16.2
+    - scikit-learn >=0.16.1
+    - deap >=1.0
+    - tqdm
+    - update_checker
+
+  run:
+    - python
+    - numpy >=1.9.3
+    - pandas >=0.16.2
+    - scikit-learn >=0.16.1
+    - deap >=1.0
+    - tqdm
+    - update_checker
+
+test:
+  # Python imports
+  imports:
+    - tpot
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rhiever/tpot
+  license: GNU General Public License v3 (GPLv3)
+  summary: 'A Python tool that automatically creates and optimizes Machine Learning pipelines using genetic programming.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

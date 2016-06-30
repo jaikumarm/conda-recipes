@@ -1,0 +1,63 @@
+package:
+  name: deap
+  version: "1.0.2"
+
+source:
+  fn: deap-1.0.2.post2.tar.gz
+  url: https://files.pythonhosted.org/packages/5b/d7/a49d3dd7aa8cbaf2b1ac8f4d6495824c886fea8b3dac4a73dc4df94cad76/deap-1.0.2.post2.tar.gz
+  md5: ccf5ed7562e4d6236c9416e3b5a9d941
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - deap = deap:main
+    #
+    # Would create an entry point called deap that calls deap.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - deap
+    - deap.benchmarks
+    - deap.tests
+    - deap.tools
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://www.github.com/deap
+  license: GNU Library or Lesser General Public License (LGPL)
+  summary: 'Distributed Evolutionary Algorithms in Python'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

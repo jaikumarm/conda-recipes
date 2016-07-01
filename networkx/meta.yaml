@@ -1,0 +1,91 @@
+package:
+  name: networkx
+  version: "1.11"
+
+source:
+  fn: networkx-1.11.tar.gz
+  url: https://files.pythonhosted.org/packages/c2/93/dbb41b03cf7c878a7409c8e92226531f840a423c9309ea534873a83c9192/networkx-1.11.tar.gz
+  md5: 6ef584a879e9163013e9a762e1cf7cd1
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - networkx = networkx:main
+    #
+    # Would create an entry point called networkx that calls networkx.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - decorator >=3.4.0
+
+  run:
+    - python
+    - decorator >=3.4.0
+
+test:
+  # Python imports
+  imports:
+    - networkx
+    - networkx.algorithms
+    - networkx.algorithms.approximation
+    - networkx.algorithms.assortativity
+    - networkx.algorithms.bipartite
+    - networkx.algorithms.centrality
+    - networkx.algorithms.chordal
+    - networkx.algorithms.coloring
+    - networkx.algorithms.community
+    - networkx.algorithms.components
+    - networkx.algorithms.connectivity
+    - networkx.algorithms.flow
+    - networkx.algorithms.isomorphism
+    - networkx.algorithms.link_analysis
+    - networkx.algorithms.operators
+    - networkx.algorithms.shortest_paths
+    - networkx.algorithms.traversal
+    - networkx.algorithms.tree
+    - networkx.classes
+    - networkx.drawing
+    - networkx.external
+    - networkx.generators
+    - networkx.linalg
+    - networkx.readwrite
+    - networkx.readwrite.json_graph
+    - networkx.testing
+    - networkx.tests
+    - networkx.utils
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  requires:
+    - nose >=0.10.1
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://networkx.github.io/
+  license: BSD License
+  summary: 'Python package for creating and manipulating graphs and networks'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

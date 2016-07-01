@@ -1,12 +1,11 @@
 package:
-  name: tpot
-  version: "0.4.parallelize"
+  name: hyperas
+  version: "0.2"
 
 source:
-#  fn: TPOT-0.4.tar.gz
-#  url: https://pypi.python.org/packages/5f/e4/d59729f549bae3249f8b134971610e0030b24099ea03ff7ac18a8c6a929a/TPOT-0.4.tar.gz
-#  md5: 64d0a678516a70e811c3ae5f5e0f4d09
-  git_url: https://github.com/jaikumarm/tpot.git
+  fn: hyperas-0.2.tar.gz
+  url: https://files.pythonhosted.org/packages/75/24/181e010fdb1c0a7b3cb5288b5a32b414e9d087c3a5331988df59ab3dd624/hyperas-0.2.tar.gz
+  md5: 4f91f4c57743f3af1e6fe9dc45d4d4e3
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -18,9 +17,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - tpot = tpot:main
+    # - hyperas = hyperas:main
     #
-    # Would create an entry point called tpot that calls tpot.main()
+    # Would create an entry point called hyperas that calls hyperas.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -31,26 +30,18 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy >=1.9.3
-    - pandas >=0.16.2
-    - scikit-learn >=0.16.1
-    - deap >=1.0
-    - tqdm
-    - update_checker
+    - keras
+    - hyperopt
 
   run:
     - python
-    - numpy >=1.9.3
-    - pandas >=0.16.2
-    - scikit-learn >=0.16.1
-    - deap >=1.0
-    - tqdm
-    - update_checker
+    - keras
+    - hyperopt
 
 test:
   # Python imports
   imports:
-    - tpot
+    - hyperas
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -65,9 +56,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/rhiever/tpot
-  license: GNU General Public License v3 (GPLv3)
-  summary: 'A Python tool that automatically creates and optimizes Machine Learning pipelines using genetic programming.'
+  home: http://github.com/maxpumperla/hyperas
+  license: MIT
+  summary: 'Simple wrapper for hyperopt to do convenient hyperparameter optimization for Keras models'
 
 # See
 # http://docs.continuum.io/conda/build.html for

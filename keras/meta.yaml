@@ -1,11 +1,11 @@
 package:
   name: keras
-  version: "1.0.4"
+  version: "1.0.6"
 
 source:
-  fn: Keras-1.0.4.tar.gz
-  url: https://pypi.python.org/packages/f5/af/282be3761ccf419a8f5fdb99407724c108beee2871c13c1f3b01d3a203e3/Keras-1.0.4.tar.gz
-  md5: 5c0a39e9ea48b94aa2ffd398f33ed643
+  fn: Keras-1.0.6.tar.gz
+  url: https://pypi.python.org/packages/c9/1b/3cdc84a3b72ea02eca9b7f2a41de8fcf17eca509ba2cec8855f96f888c74/Keras-1.0.6.tar.gz
+  md5: f4cc2786ea01d33771e2c160719fdfc2
 #  patches:
    # List any patch files here
    # - fix.patch

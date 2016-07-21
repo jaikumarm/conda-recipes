@@ -1,12 +1,9 @@
 package:
-  name: tpot
-  version: "0.4.1.parallelize"
+  name: hyperopt
+  version: !!str 0.0.3.dev1
 
 source:
-#  fn: TPOT-0.4.tar.gz
-#  url: https://pypi.python.org/packages/5f/e4/d59729f549bae3249f8b134971610e0030b24099ea03ff7ac18a8c6a929a/TPOT-0.4.tar.gz
-#  md5: 64d0a678516a70e811c3ae5f5e0f4d09
-  git_url: https://github.com/jaikumarm/tpot.git
+  git_url: https://github.com/hyperopt/hyperopt.git
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -18,9 +15,9 @@ source:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
-    # - tpot = tpot:main
+    # - theano = theano:main
     #
-    # Would create an entry point called tpot that calls tpot.main()
+    # Would create an entry point called theano that calls theano.main()
 
 
   # If this is a new build for the same version, increment the build
@@ -29,28 +26,25 @@ source:
 
 requirements:
   build:
-    - python
-    - setuptools
-    - numpy >=1.9.3
-    - pandas >=0.16.2
-    - scikit-learn >=0.16.1
-    - deap >=1.0
-    - tqdm
-    - update_checker
+    - numpy
+    - scipy
+    - nose
+    - pymongo
+    - networkx
 
   run:
-    - python
-    - numpy >=1.9.3
-    - pandas >=0.16.2
-    - scikit-learn >=0.16.1
-    - deap >=1.0
-    - tqdm
-    - update_checker
+    - numpy
+    - scipy
+    - nose
+    - pymongo
+    - networkx
 
 test:
+  requires:
+    - nose
   # Python imports
   imports:
-    - tpot
+    - hyperopt
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -65,9 +59,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/rhiever/tpot
-  license: GNU General Public License v3 (GPLv3)
-  summary: 'A Python tool that automatically creates and optimizes Machine Learning pipelines using genetic programming.'
+  home: http://github.com/hyperopt/hyperopt
+  license: BSD License
+  summary: 'Distributed Asynchronous Hyper-parameter Optimization'
 
 # See
 # http://docs.continuum.io/conda/build.html for

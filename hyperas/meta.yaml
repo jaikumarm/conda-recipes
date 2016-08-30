@@ -1,11 +1,12 @@
 package:
   name: hyperas
-  version: "0.2"
+  version: "0.3.dev"
 
 source:
-  fn: hyperas-0.2.tar.gz
-  url: https://files.pythonhosted.org/packages/75/24/181e010fdb1c0a7b3cb5288b5a32b414e9d087c3a5331988df59ab3dd624/hyperas-0.2.tar.gz
-  md5: 4f91f4c57743f3af1e6fe9dc45d4d4e3
+  git_url: https://github.com/maxpumperla/hyperas.git
+  #fn: hyperas-0.2.tar.gz
+  #url: https://files.pythonhosted.org/packages/75/24/181e010fdb1c0a7b3cb5288b5a32b414e9d087c3a5331988df59ab3dd624/hyperas-0.2.tar.gz
+  #md5: 4f91f4c57743f3af1e6fe9dc45d4d4e3
 #  patches:
    # List any patch files here
    # - fix.patch

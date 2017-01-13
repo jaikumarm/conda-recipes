@@ -1,11 +1,11 @@
 package:
   name: keras
-  version: "1.0.6"
+  version: "1.2.0"
 
 source:
-  fn: Keras-1.0.6.tar.gz
-  url: https://pypi.python.org/packages/c9/1b/3cdc84a3b72ea02eca9b7f2a41de8fcf17eca509ba2cec8855f96f888c74/Keras-1.0.6.tar.gz
-  md5: f4cc2786ea01d33771e2c160719fdfc2
+  fn: Keras-1.2.0.tar.gz
+  url: https://pypi.python.org/packages/ef/39/06886076de3d1eaae6df9aace977284a3c1267f8576c3d07ca0d37437b38/Keras-1.2.0.tar.gz
+  md5: d24d8b72747f8cc38e659ce8fc92ad3c
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -39,6 +39,7 @@ requirements:
     - theano
     - pyyaml
     - six
+    - h5py
 
 test:
   # Python imports
@@ -48,7 +49,6 @@ test:
     - keras.datasets
     - keras.engine
     - keras.layers
-    - keras.legacy
     - keras.preprocessing
     - keras.utils
     - keras.wrappers

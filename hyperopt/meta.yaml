@@ -1,6 +1,6 @@
 package:
   name: hyperopt
-  version: 0.1.1
+  version: 0.1.2
 
 source:
     git_url: https://github.com/hyperopt/hyperopt.git
@@ -39,6 +39,7 @@ requirements:
     - six
     - networkx
     - future
+    - tqdm
 
   run:
     - python
@@ -49,6 +50,7 @@ requirements:
     - six
     - networkx
     - future
+    - tqdm
 
 test:
   requires:
